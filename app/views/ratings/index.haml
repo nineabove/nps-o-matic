@@ -1,31 +1,51 @@
-%h1 NPS-o-Matic
+= javascript_pack_tag 'nps_o_matic'
 
-%p Rate!
+.page
+  .container
+    .row
+      .col
+        %h1 NPS-o-Matic
 
-%p How likely would you be to recommend Acme Systems to a friend or colleague?
+    #nps-o-matic{data: @nps_obj.to_json}
 
-- 0.upto(10) do |i|
-  = form_for Rating.new(score: i) do |f|
-    = f.hidden_field :score
-    = f.submit i
+    .row
+      .col.col-widened
+        .module
+          .module-header
+            .module-header-main NPS Color Legend
+          .module-body
+            .nps-color-legend-thermometer
+            .row.nps-color-legend-scale
+              .col.nps-color-legend-scale-bar
+              .col.nps-color-legend-scale-bar
+              .col.nps-color-legend-scale-bar
+              .col.nps-color-legend-scale-bar
+              .col.nps-color-legend-scale-bar
+              .col.nps-color-legend-scale-bar
+              .col.nps-color-legend-scale-bar
+              .col.nps-color-legend-scale-bar.last
 
-
-%p Appreciate!
-
-%p= pluralize Rating.count, 'Rating'
-
-
-%p
-  = number_to_percentage Rating.promoters_percentage
-  Promoters
-
-%p
-  = number_to_percentage Rating.detractors_percentage
-  Detractors
-
-%p
-  NPS
-  = Rating.nps
-
-
-%p NPS Color Legend
+            .row.nps-color-legend-numbers
+              .under-one-hundred
+                .row
+                  .col.nps-color-legend-number
+                    \-100
+                  .col.nps-color-legend-number
+                    \-75
+                  .col.nps-color-legend-number
+                    \-50
+                  .col.nps-color-legend-number
+                    \-25
+                  .col.nps-color-legend-number
+                    &nbsp;&nbsp;0
+                  .col.nps-color-legend-number
+                    &nbsp;25
+                  .col.nps-color-legend-number
+                    &nbsp;50
+                  .col.nps-color-legend-number
+                    &nbsp;75
+              .one-hundred
+                .row
+                  .col.nps-color-legend-number
+                    100
+      .col

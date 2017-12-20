@@ -1,0 +1,46 @@
+$nps-result-number-color: #fff;
+$nps-result-unit-color: #999;
+
+.nps-result {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  .nps-result-scale {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .nps-result-pointer {
+    transform: translate(-50%, -50%) rotate(0deg);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    background-color: green;
+    height: 141px;
+    width: 81px;
+    mask-position: center;
+    -webkit-mask-position: center;
+    mask-image: url(asset-path('nps-guide-dial3.svg'));
+    -webkit-mask-image: url(asset-path('nps-guide-dial3.svg'));
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+  }
+  .nps-result-number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.9em;
+    color: $nps-result-number-color;
+    z-index: 1
+  }
+  .nps-result-unit {
+    font-size: 0.8em;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
