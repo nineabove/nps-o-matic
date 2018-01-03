@@ -1,0 +1,78 @@
+$nps-rate-square: #045eb0
+$nps-rate-square-txt: #fff
+$nps-rate-square-size: 6vh
+$nps-rate-square-size-smaller: 5vh
+
+.nps-rate
+  margin-top: 50px
+  .nps-rate-zero-ten
+    margin-bottom: 5px
+    display: flex
+    justify-content: space-between
+    height: $nps-rate-square-size
+    .nps-rate-zero-ten-square
+      box-sizing: border-box
+      flex: 1
+      flex-direction: column
+      flex-grow: 1
+      flex-basis: 0
+      min-width: $nps-rate-square-size
+      max-width: $nps-rate-square-size
+      height: $nps-rate-square-size
+      border-radius: 3px
+      color: $nps-rate-square-txt
+      line-height: $nps-rate-square-size
+      cursor: pointer
+
+      &.zero
+        background-color: lighten($nps-rate-square, 50%)
+      &.one
+        background-color: lighten($nps-rate-square, 45%)
+      &.two
+        background-color: lighten($nps-rate-square, 40%)
+      &.three
+        background-color: lighten($nps-rate-square, 35%)
+      &.four
+        background-color: lighten($nps-rate-square, 30%)
+      &.five
+        background-color: lighten($nps-rate-square, 25%)
+      &.six
+        background-color: lighten($nps-rate-square, 20%)
+      &.seven
+        background-color: lighten($nps-rate-square, 15%)
+      &.eight
+        background-color: lighten($nps-rate-square, 10%)
+      &.nine
+        background-color: lighten($nps-rate-square, 5%)
+      &.ten
+        background-color: $nps-rate-square
+    @media (min-width: 1055px) and (max-width: 1250px)
+      height: $nps-rate-square-size-smaller
+      .nps-rate-zero-ten-square
+        min-width: $nps-rate-square-size-smaller
+        max-width: $nps-rate-square-size-smaller
+        height: $nps-rate-square-size-smaller
+        border-radius: 3px
+        line-height: $nps-rate-square-size-smaller
+    @media (min-width: 0px) and (max-width: 720px)
+      height: $nps-rate-square-size-smaller
+      .nps-rate-zero-ten-square
+        min-width: $nps-rate-square-size-smaller
+        max-width: $nps-rate-square-size-smaller
+        height: $nps-rate-square-size-smaller
+        border-radius: 3px
+        line-height: $nps-rate-square-size-smaller
+
+  .nps-rate-likelies
+    display: flex
+    .nps-rate-likelies-col
+      box-sizing: border-box
+      flex-direction: column
+      flex-grow: 1
+      flex-basis: 0
+      color: #045eb0
+      font-size: 0.7em
+      font-weight: 600
+
+
+

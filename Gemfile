@@ -12,6 +12,8 @@ group :development, :test do
   gem 'byebug', '9.1.0'
   gem 'haml_lint', '0.25.1'
   gem 'rspec-rails', '3.7.1'
+  gem 'capybara', '2.16.1'
+  gem 'selenium-webdriver', '~> 3.8'
 end
 
 group :development do
